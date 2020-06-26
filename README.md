@@ -14,9 +14,8 @@
  
  - [x] Connecting to Hadoop using Spark and Loading Data from HDFS
  - [x] Data Sampling to 100 random rows for Data Exploration 
- - [ ] Defining Data Pipeline End Use Case 
- - [ ] Deduplication, Missing Values 
- - [ ] Conceptual Modeling using Star Schema : Fact Tables & Dimensions Tables
- - [ ] Selecting Only Needed Columns for our Model
- - [ ] Loading Data from Spark to our Model and write it into parquet format
- - [ ] Data Tables Counts Checks and Joins Checks on Fact Table
+ - [x] Defining Data Pipeline End Use Case : Detailed Trip Information
+ - [x] Deduplication, Missing Values 
+ - [x] Selecting Only Needed Columns for our Model
+ - [x] Loading Data from Spark to our Model and write it into parquet format
+ - [x] Data Quality Checks

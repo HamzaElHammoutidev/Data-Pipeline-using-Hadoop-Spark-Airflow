@@ -3,6 +3,8 @@ findspark.init()
 
 from helpers.gather import Gather
 from helpers.sampler import Sampler
+from helpers.processer import Processer
+from helpers.checker import  Checker
 
 from pyspark.sql import SparkSession
 
@@ -18,7 +20,15 @@ paths = {
 Gather = Gather(spark,paths)
 taxi_data = Gather.get_taxi_nyc_data()
 
-# Sampling
-Sampler.taxi_data_sampling(taxi_data,"sampled/taxi_sample.xlsx")
+# Sampling for exploration
+#Sampler.taxi_data_sampling(taxi_data,"sampled/taxi_sample.xlsx")
+
+# Processing
+taxi_processed_data = Processer.processing_data(taxi_data)
+
+# data quality checks
+checker = Checker(spark)
+checker.data_quatity(taxi_processed_data)
+
 
 
